@@ -7,9 +7,9 @@ const Quiz = () => {
   const QuizData = useLoaderData();
   const [rightAns, setRightAns] = useState([]);
   const right = () =>
-    toast.success("Your answer is correct 😊", {
+    toast.success("Your answer is correct ", {
       position: "top-right",
-      autoClose: 5000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -18,9 +18,9 @@ const Quiz = () => {
       theme: "colored",
     });
   const wrong = () =>
-    toast.error("Your answer is wrong 😞", {
+    toast.error("Your answer is wrong ", {
       position: "top-right",
-      autoClose: 5000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -41,11 +41,11 @@ const Quiz = () => {
   };
   return (
     <div className="mt-4">
-      <h2 className="text-2xl font-semibold text-center">
-        Test Of {QuizData.data.name}
+      <h2 className="text-3xl font-semibold text-center text-violet-500">
+        Quiz Of {QuizData.data.name}
       </h2>
-      <h3 className="font-semibold text-center bg-blue-700 mt-5 p-2 text-white rounded w-6/12 mx-auto">
-        Your Score is : {rightAns.length}
+      <h3 className="font-semibold text-center bg-yellow-700 mt-5 p-2 text-white rounded w-6/12 mx-auto">
+        Your Mark is : {rightAns.length}
       </h3>
       <div className="px-4 mt-3 mb-16 grid lg:grid-cols-2 grid-cols-1 gap-5">
         {QuizData.data.questions.map((question) => (
