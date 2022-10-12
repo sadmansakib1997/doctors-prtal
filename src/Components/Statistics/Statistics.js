@@ -16,7 +16,7 @@ const Statistics = () => {
   return (
     <div className="lg:px-96 md:mt-5 px-0 mt-5">
       <div>
-        <ResponsiveContainer width="92%" height={400}>
+        <ResponsiveContainer width="92%" height={500}>
           <BarChart data={QuizData.data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
