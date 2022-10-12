@@ -7,7 +7,7 @@ const Quiz = () => {
   const QuizData = useLoaderData();
   const [rightAns, setRightAns] = useState([]);
   const right = () =>
-    toast.success("Your answer is correct ", {
+    toast.success("Yes you are right ", {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -18,7 +18,7 @@ const Quiz = () => {
       theme: "colored",
     });
   const wrong = () =>
-    toast.error("Your answer is wrong ", {
+    toast.error("Oh no you are wrong ", {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,

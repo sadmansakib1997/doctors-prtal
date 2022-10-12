@@ -16,7 +16,7 @@ const Quiztopic = ({ topic }) => {
           }
         >
           <Link to={`/quiz/${id}`}>
-            <h5 className="text-2xl font-bold text-gray-900">{name}</h5>
+            <h5 className="text-2xl font-bold text-blue-700">{name}</h5>
           </Link>
           <div className="flex items-center justify-between">
             <span className="text-gray-900">Question : {total}</span>
