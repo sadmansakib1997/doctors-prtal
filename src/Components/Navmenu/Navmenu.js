@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 
 const Navmenu = () => {
   return (
-    <div className="md:mt-4">
+    <div className="mx-8 md:mt-4">
       <Navbar fluid={true} rounded={true}>
         <Navbar.Brand>
           <NavLink to="/">
-            <span className="text-2xl font-bold text-blue-700">
-              Skills_Test
+            <span className="text-2xl font-bold text-red-500">
+              QUIZ CRACKERS
             </span>
           </NavLink>
         </Navbar.Brand>
@@ -25,7 +25,7 @@ const Navmenu = () => {
                 }
                 to="/home"
               >
-                Home
+                <span className="text-2xl font-bold text-blue-500">Home</span>
               </NavLink>
             </Navbar.Link>
             <Navbar.Link>
@@ -37,7 +37,9 @@ const Navmenu = () => {
                 }
                 to="/statistics"
               >
-                Statistics
+                <span className="text-2xl font-bold text-blue-500">
+                  Statistics
+                </span>
               </NavLink>
             </Navbar.Link>
             <Navbar.Link>
@@ -49,7 +51,7 @@ const Navmenu = () => {
                 }
                 to="/blog"
               >
-                Blog
+                <span className="text-2xl font-bold text-blue-500">Blog</span>
               </NavLink>
             </Navbar.Link>
           </div>
