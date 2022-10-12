@@ -9,7 +9,7 @@ const Navmenu = () => {
         <Navbar.Brand>
           <NavLink to="/">
             <span className="text-2xl font-bold text-red-500">
-              QUIZ CRACKERS
+              Test Your IQ
             </span>
           </NavLink>
         </Navbar.Brand>
