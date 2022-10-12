@@ -12,18 +12,10 @@ In this project we have made a site that shows us how to work Quiz website. We h
 
 Full Project is Based on ReactJS. We have used many components to Build the site.
 
-### `Bootstrap`
+### `tailwind`
 
-We have Used BootStrap to design our site .
-
-### `Font Awesome Icons`
-
-Font Awesome Icons have been used to design.
-
-### `HTML & CSS`
-
-HTML & CSS is a core part for building a site. I have also used HTML & CSS.
+We have Used tailwind to design our site .
 
 ### `NETLIFY LIVE SITE LINK`
 
-[LiveSite]() --click to view Live Site
+[LiveSite](https://fantastic-sprinkles-c2ef54.netlify.app/) --click to view Live Site
