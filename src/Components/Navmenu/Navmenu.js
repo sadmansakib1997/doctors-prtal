@@ -25,7 +25,7 @@ const Navmenu = () => {
                 }
                 to="/home"
               >
-                <span className="text-2xl font-bold text-blue-500">Home</span>
+                <span className="text-2xl font-bold text-blue-500">Topics</span>
               </NavLink>
             </Navbar.Link>
             <Navbar.Link>
