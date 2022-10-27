@@ -9,8 +9,6 @@ const Courses = () => {
   return (
     <Container className="mb-5">
       <Row>
-       
-
         <Col lg="10">
           <div className="row row-cols-1 rounded row-cols-md-2 g-4 mt-5">
             {courses.map((course) => (
@@ -26,16 +24,16 @@ const Courses = () => {
                       />
                     </div>
                     <div className="card-body">
-                      <h5 className="card-title fw-bold mx-auto text-center bg-dark text-white p-2">{course.name}</h5>
-                      <p className="card-text">
-                        {course?.description}
-                      </p>
+                      <h5 className="card-title fw-bold mx-auto text-center bg-dark text-white p-2">
+                        {course.name}
+                      </h5>
+                      <p className="card-text">{course?.description}</p>
                     </div>
                     <Link
                       to={`/courseDetails/${course.id}`}
                       className="btn btn-danger "
                     >
-                    Details
+                      Details
                     </Link>
                   </div>
                 </div>

@@ -5,9 +5,7 @@ const Home = () => {
   return (
     <div className="w-full p-1 mb-0">
       <h2 className="fw-bold text-center">All Programing languages </h2>
-      <p className="text-center fw-semibold">
-        We Provide Programming realted Course
-      </p>
+      <p className="text-center fw-semibold">We are best programmer</p>
       <Carousel className="mt-2 ">
         <Carousel.Item className="">
           <img
