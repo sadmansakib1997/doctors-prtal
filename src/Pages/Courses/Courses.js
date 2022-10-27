@@ -10,7 +10,7 @@ const Courses = () => {
     <Container className="mb-5">
       <Row>
         <Col lg="10">
-          <div className="row row-cols-1 rounded row-cols-md-2 g-4 mt-5">
+          <div className=" row row-cols-1 rounded row-cols-md-2 g-4 mt-5">
             {courses.map((course) => (
               <div key={course.id}>
                 <div className="col">
