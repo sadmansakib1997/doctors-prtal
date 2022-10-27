@@ -14,7 +14,7 @@ const Courses = () => {
             {courses.map((course) => (
               <div key={course.id}>
                 <div className="col">
-                  <div className="card h-50 w-full shadow rounded">
+                  <div className="card h-50  w-full shadow rounded">
                     <div>
                       <img
                         style={{ height: "300px" }}

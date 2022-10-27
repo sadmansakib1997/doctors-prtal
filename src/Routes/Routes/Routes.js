@@ -24,7 +24,7 @@ export const routes = createBrowserRouter([
       {
         path: "/courses",
         element: <Courses></Courses>,
-        loader: () => fetch(`http://localhost:5000/courses`),
+        loader: () => fetch(`https://learning-roan.vercel.app/courses`),
       },
       {
         path: "/blog",
@@ -46,7 +46,7 @@ export const routes = createBrowserRouter([
         path: "/courseDetails/:id",
         element: <CourseDetail></CourseDetail>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courses/${params.id}`),
+          fetch(`https://learning-roan.vercel.app/courses/${params.id}`),
       },
       {
         path: "/checkout/:id",
@@ -56,7 +56,7 @@ export const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courses/${params.id}`),
+          fetch(`https://learning-roan.vercel.app/courses/${params.id}`),
       },
     ],
   },
