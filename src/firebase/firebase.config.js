@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration dur
 const firebaseConfig = {
   apiKey: "AIzaSyBxNvjEgw_IRZ0sNl-5twFAv997Lxsfwyw",
   authDomain: "learning-platform-sakib.firebaseapp.com",
