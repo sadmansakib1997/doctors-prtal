@@ -17,7 +17,7 @@ const CourseDetail = () => {
     <div className="p-5 ">
       <Card className="  mx-auto mt-5 rounded mb-5 col-md-6 shadow">
         <Card.Title className="text-center fw-bold bg-dark text-light m-0 rounded py-2 mx-2">
-          This is {name} 
+          This is {name}
           <Pdf targetRef={ref} filename="p-Course.pdf">
             {({ toPdf }) => (
               <button onClick={toPdf}>
@@ -39,13 +39,13 @@ const CourseDetail = () => {
         </div>
         <div className="d-flex justify-content-between px-4">
           <p className="fw-bold"> Price: {price}$</p>
-       
+
           <div className="d-flex">
             <FaEye className="mt-2"></FaEye>
             <p className="mt-1 px-2 fw-bold">{total_view}</p>
           </div>
           <Button className="px-0 fw-bold" variant="outline-dark">
-            <Link to={`/checkout/${id}`}>Special Package </Link>
+            <Link to={`/checkout/${id}`}>Get premium access </Link>
           </Button>
         </div>
       </Card>
