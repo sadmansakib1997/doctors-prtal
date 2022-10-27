@@ -1,14 +1,14 @@
 import React from "react";
+import Header from "../Pages/Shared/Header/Header";
 import { Outlet } from "react-router-dom";
-import Navmenu from "../Navmenu/Navmenu";
 
-const Mainlayout = () => {
+const Main = () => {
   return (
     <div>
-      <Navmenu></Navmenu>
+      <Header></Header>
       <Outlet></Outlet>
     </div>
   );
 };
 
-export default Mainlayout;
+export default Main;
