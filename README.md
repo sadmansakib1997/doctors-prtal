@@ -22,6 +22,5 @@ We have Used BootStrap to design our site .
 
 ### `firebase LIVE SITE LINK`
 
-vercel: ( https://learning-roan.vercel.app/)
-
-[LiveSite](https://web-development-and-programming-club.netlify.app/) --click to view Live Site
+#vercel: ( https://learning-roan.vercel.app/)
+#server side : (https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-sadmansakib1997)
