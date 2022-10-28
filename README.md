@@ -20,7 +20,12 @@ We have Used BootStrap to design our site .
 
 .
 
-### `firebase LIVE SITE LINK`
+### `vercel LINK`
 
 #vercel: ( https://learning-roan.vercel.app/)
+
+### `server SITE LINK`
+
 #server side : (https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-sadmansakib1997)
+
+### `firebase LIVE SITE LINK`
