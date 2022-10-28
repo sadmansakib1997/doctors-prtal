@@ -39,3 +39,5 @@ https://github.com/programming-hero-web-course1/b610-learning-platform-client-si
 ///////////////////////////////////////////////////////////
 
 ### `firebase LIVE SITE LINK`
+
+https://learning-platform-sakib.web.app
