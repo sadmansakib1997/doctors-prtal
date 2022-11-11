@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+
 import { NavLink } from "react-router-dom";
 import { FaPhoneAlt, FaMapMarkedAlt, FaEnvelope } from "react-icons/fa";
 import footerImg1 from "../../images/footer-1-1.jpg";
