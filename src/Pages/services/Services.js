@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Container, Row, Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import Service from "../service/Service";
 
 const Services = () => {
