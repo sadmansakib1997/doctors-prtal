@@ -1,14 +1,11 @@
-import './App.css';
-import { routes } from './Routes/Routes/Routes';
-import { Toaster } from 'react-hot-toast';
-import { RouterProvider } from 'react-router-dom';
+import "./App.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./Layout/routes/Routes";
 
 function App() {
   return (
-    <div className="">
-  
-      <RouterProvider router={routes}></RouterProvider>
-      <Toaster></Toaster>
+    <div className="App">
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
