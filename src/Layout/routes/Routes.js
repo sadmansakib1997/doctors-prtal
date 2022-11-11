@@ -12,7 +12,7 @@ import NotFound from "../../pages/NotFound/NotFound";
 import OurService from "../../pages/OurService/OurService";
 import PrivateRoute from "../../pages/PrivateRoute/PrivateRoute";
 import ServiceDetails from "../../pages/ServiceDetails/ServiceDetails";
-import Services from "../../pages/services/Services";
+
 import Signup from "../../pages/Signup/Signup";
 
 const router = createBrowserRouter([
