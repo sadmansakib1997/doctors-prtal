@@ -16,9 +16,9 @@ const Services = () => {
 
   return (
     // service-part start
-    <div>
+    <div className="bg-slate-400 my-4 py-4">
       <div className="section-top">
-        <h2 className="text-4xl font-bold text-red-500 mb-3">
+        <h2 className="text-5xl font-bold mb-3">
           Explore the World for Yourself
         </h2>
         <p className="text-2xl font-semibold">
@@ -34,7 +34,7 @@ const Services = () => {
           variant="secondary"
         />
       ) : (
-        <div className="grid grid-cols-3 gap-4 my-7">
+        <div className="grid grid-cols-3 gap-4 my-7 px-5">
           {services.map((service) => (
             <Service key={service._id} service={service}></Service>
           ))}
