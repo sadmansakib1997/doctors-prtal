@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, div } from "react-bootstrap";
 import Team from "../Team/Team";
 // import "./OurTeam.css";
 
@@ -17,20 +17,21 @@ const OurTeam = () => {
 
   return (
     // team-area start
-    <div className="team-area">
+    <div className="bg-red-300 py-5 mb-10">
       <Container>
         <div className="section-top">
-          <h2 className="section-title">meet our trip organizer</h2>
-          <p>
-            We have the best team in the whole world that organizes the best
+          <h2 className="text-6xl font-bold mb-3">Our trip organizer</h2>
+          <p className="text-2xl font-medium">
+            We have the best team in the whole world that organizes the best{" "}
+            <br />
             trips for our clients and make their journeys life remembering.
           </p>
         </div>
-        <Row>
+        <div className="grid gap-5 grid-cols-2 ml-20 my-10 ">
           {teams.map((team) => (
             <Team key={team._id} team={team}></Team>
           ))}
-        </Row>
+        </div>
       </Container>
     </div>
     // team-area end

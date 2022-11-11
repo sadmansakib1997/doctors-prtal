@@ -23,7 +23,7 @@ const Testimonial = () => {
       </div>
 
       <div className="container mt-14 px-6 mx-auto">
-        <section class="mb-32 text-gray-800 text-center">
+        <section class="mb-22 text-gray-800 text-center">
           <div class="grid md:grid-cols-3 gap-x-6 lg:gap-x-12">
             <div class="mb-12 md:mb-0 bg-emerald-500 p-5">
               <div class="flex justify-center mb-6">

@@ -36,7 +36,7 @@ const AboutUs = () => {
             <Col lg={6} className="p-0">
               <div className="our-history-content">
                 <p className="sub-title">history</p>
-                <h2>You Explore World</h2>
+                <h2>Explore SYNTHETIC World</h2>
                 <p>
                   Come Explore the world with us and enjoy the best trip of your
                   life. We offer trips to every end of the world.
