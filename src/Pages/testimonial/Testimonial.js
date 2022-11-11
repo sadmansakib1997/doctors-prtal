@@ -120,7 +120,7 @@ const Testimonial = () => {
             <div class="flex justify-center mb-6">
               <img src={user2} alt="" class="rounded-full shadow-lg w-32" />
             </div>
-            <h5 class="text-lg font-bold mb-4">Maria Smantha</h5>
+            <h5 class="text-lg font-bold mb-4">Sadman sakib</h5>
             <h6 class="font-medium text-blue-600 mb-4">Lawyer</h6>
             <p class="mb-4">
               I had a wonderful time during the trip. The guide was informative,
@@ -139,7 +139,7 @@ const Testimonial = () => {
             <div class="flex justify-center mb-6">
               <img src={user3} alt="" class="rounded-full shadow-lg w-32" />
             </div>
-            <h5 class="text-lg font-bold mb-4">Maria Smantha</h5>
+            <h5 class="text-lg font-bold mb-4">Ahona Shikdeer</h5>
             <h6 class="font-medium text-blue-600 mb-4">Bussinesman</h6>
             <p class="mb-4">
               Always enjoyed my stay with Hilton Hotel and Resorts, top class
