@@ -11,7 +11,13 @@ import "./Testimonial.css";
 const Testimonial = () => {
   return (
     // testimonial-part start
-    <div className="testimonial-part">
+    <div className="">
+      <div className="mt-10 mb-10">
+        <h2 className="text-5xl font-bold mb-3 text-red-500">
+          BEAUTIFUL REVIEWS
+        </h2>
+        <p className="text-3xl font-semibold">OUR BELoved Customers</p>
+      </div>
       <Container fluid>
         <Row>
           <Col lg={6} className="p-0">
