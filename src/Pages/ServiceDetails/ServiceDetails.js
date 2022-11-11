@@ -50,7 +50,7 @@ const ServiceDetails = () => {
   return (
     // service-details start
     <div>
-      <div className="service-details-bg">
+      <div className="text-6xl">
         <h1>{service?.title}</h1>
       </div>
       <div className="service-details-container">
@@ -60,38 +60,37 @@ const ServiceDetails = () => {
               <div className="service-details">
                 <h2>{service?.title}</h2>
                 <p className="service-price">${service?.price} / per person</p>
-                <p className="service-des">{service?.des}</p>
               </div>
-              <ul className="service-list">
+              <ul className="service-list justify-center text-3xl font-bold">
                 <li className="">13 Days</li>
                 <li>16+ Age</li>
                 <li>Explore</li>
               </ul>
-              <div className="services-des">
+              <div className="services-des bg-cyan-400">
                 <ul>
-                  <li className="table-title">Destination</li>
-                  <li className="text">{service?.title}</li>
+                  <li className="table-title">Destination:</li>
+                  <li className="text-2xl justify-center">{service?.title}</li>
                 </ul>
                 <ul>
-                  <li className="table-title">Departure</li>
-                  <li className="text">
+                  <li className="table-title">Departure:</li>
+                  <li className="text-2xl">
                     Please arrive by 9:15 AM for a prompt departure at 9:30 AM.
                   </li>
                 </ul>
                 <ul>
-                  <li className="table-title">Departure Time</li>
-                  <li className="text">Approximately 8:30 PM.</li>
+                  <li className="table-title">Departure Time:</li>
+                  <li className="text-2xl">Approximately 8:30 PM.</li>
                 </ul>
                 <ul>
-                  <li className="table-title">Dress Code</li>
-                  <li className="text">
+                  <li className="table-title">Dress Code:</li>
+                  <li className="text-2xl">
                     Casual. Comfortable athletic clothing, hiking shoes, hat and
                     warm jacket.
                   </li>
                 </ul>
                 <ul>
-                  <li className="table-title">Included</li>
-                  <li className="text">
+                  <li className="table-title">Included:</li>
+                  <li className="text-2xl">
                     All Museum Tickets, Meals, divansportation/Car
                   </li>
                 </ul>
