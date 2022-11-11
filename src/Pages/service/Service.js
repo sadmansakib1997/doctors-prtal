@@ -13,18 +13,6 @@ const Service = ({ service }) => {
   };
 
   return (
-    // <Col lg={4} md={6}>
-    //   <div className="servcie">
-    //     <img src={img} alt="" />
-    //     <p className="price">$ {price}</p>
-    //     <div className="service-content">
-    //       <h5 className="sevice-title">{title}</h5>
-    //       <p>{des}</p>
-    //       <button onClick={handleBookBtn}>book now</button>
-    //     </div>
-    //   </div>
-    // </Col>
-
     <div className="service">
       <div className=" card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
@@ -37,7 +25,7 @@ const Service = ({ service }) => {
           <div className="card-actions">
             <Link to={`/servicedetails/${_id}`}>
               <button onClick={handleBookBtn} className="btn btn-primary">
-                BOOK NOW
+                View DeTails
               </button>
             </Link>
           </div>

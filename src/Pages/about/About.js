@@ -12,50 +12,6 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="about-area">
-      {/* <Container>
-        <Row>
-          <Col lg={3}>
-            <div className="single-about">
-              <FaBusAlt className="about-icon" />
-              <h5>Private Transport</h5>
-              <p>
-                We have the best team in the whole world that organizes the best
-                trips for our clients and make their
-              </p>
-            </div>
-          </Col>
-          <Col lg={3}>
-            <div className="single-about">
-              <FaGlobeEurope className="about-icon" />
-              <h5>Diverse Destinations</h5>
-              <p>
-                We have the best team in the whole world that organizes the best
-                trips for our clients and make their
-              </p>
-            </div>
-          </Col>
-          <Col lg={3}>
-            <div className="single-about">
-              <FaHotel className="about-icon" />
-              <h5>Great Hotels</h5>
-              <p>
-                We have the best team in the whole world that organizes the best
-                trips for our clients and make their
-              </p>
-            </div>
-          </Col>
-          <Col lg={3}>
-            <div className="single-about">
-              <FaAddressBook className="about-icon" />
-              <h5>Fast Booking</h5>
-              <p>
-                We have the best team in the whole world that organizes the best
-                trips for our clients and make their
-              </p>
-            </div>
-          </Col>
-        </Row>
-      </Container> */}
       <div className="bg-emerald-300 pb-6 mb-10">
         <h1 className="mt-16 text-6xl font-bold text-red-500 pt-4">
           OUR SERVICES

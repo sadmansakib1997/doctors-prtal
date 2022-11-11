@@ -15,13 +15,6 @@ const Home = () => {
       <Testimonial></Testimonial>
       <TripGallery></TripGallery>
       <OurTeam></OurTeam>
-
-      {/* <Banner></Banner>
-      <About></About>
-      <Services></Services>
-      <Testimonial></Testimonial>
-      <TripGallery></TripGallery>
-      <OurTeam></OurTeam> */}
     </div>
   );
 };

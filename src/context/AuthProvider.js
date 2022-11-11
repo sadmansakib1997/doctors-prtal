@@ -50,49 +50,6 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  // const [user, setUser] = useState({});
-  // const [error, setError] = useState("");
-  // const [isLoading, setIsLoading] = useState(true);
-
-  // // signin in google
-  // const signInUsingGoogle = () => {
-  //   setIsLoading(true);
-  //   const googleProvider = new GoogleAuthProvider();
-  //   return signInWithPopup(auth, googleProvider);
-  // };
-  // // observer with user state changed
-  // useEffect(() => {
-  //   const unsubscribed = onAuthStateChanged(auth, (user) => {
-  //     if (user) {
-  //       setUser(user);
-  //     }
-  //     setIsLoading(false);
-  //   });
-  //   return () => unsubscribed;
-  // }, []);
-  // // function for signout
-  // const logOut = () => {
-  //   setIsLoading(true);
-  //   signOut(auth)
-  //     .then(() => {
-  //       setUser({});
-  //     })
-  //     .catch((error) => {
-  //       setError(error.message);
-  //     })
-  //     .finally(() => setIsLoading(false));
-  // };
-
-  // const allContext = {
-  //   user,
-  //   error,
-  //   setError,
-  //   signInUsingGoogle,
-  //   logOut,
-  //   isLoading,
-  //   setIsLoading,
-  // };
-
   const allContext = {
     user,
     loading,

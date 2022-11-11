@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import useAuth from "../../hooks/useAuth";
+
 import swal from "sweetalert";
 import "./MyOrder.css";
 import { useContext } from "react";

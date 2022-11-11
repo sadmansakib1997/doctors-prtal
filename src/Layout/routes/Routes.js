@@ -3,6 +3,7 @@ import Main from "../../Main/Main";
 
 import AboutUs from "../../pages/AboutUs/AboutUs";
 import AddService from "../../pages/AddService/AddService";
+import Blogs from "../../pages/Blogs/Blogs";
 import Contact from "../../pages/Contact/Contact";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
             <ServiceDetails></ServiceDetails>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
       },
       {
         path: "*",
