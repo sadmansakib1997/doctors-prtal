@@ -1,99 +1,109 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-// import img from "../../assets/images/login/login.svg";
-import { AuthContext } from "../../context/AuthProvider";
-// import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import { Authcontext } from "../../context/Authprovider/Authprovider";
+import Usetoken from "../../hooks/Usetoken";
 
 const Login = () => {
-  const { login } = useContext(AuthContext);
+  const { login } = useContext(Authcontext);
+  const [loginerror, setloginerror] = useState("");
+  const [loginuseremail, setloginuseremail] = useState("");
+  const [token] = Usetoken(loginuseremail);
   const location = useLocation();
   const navigate = useNavigate();
 
-  const from = location.state?.from?.pathname || "/";
+  const from = location.state?.from?.pahtname || "/";
 
-  const handleLogin = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const email = form.email.value;
-    const password = form.password.value;
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
-    login(email, password)
+  if (token) {
+    navigate(from, { replace: true });
+  }
+
+  const handleLogin = (data) => {
+    console.log(data);
+    setloginerror("");
+    login(data.email, data.password)
       .then((result) => {
         const user = result.user;
-
-        const currentUser = {
-          email: user.email,
-        };
-
-        console.log(currentUser);
-
-        // get jwt token
-        fetch("https://genius-car-server-neon.vercel.app/jwt", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(currentUser),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            // local storage is the easiest but not the best place to store jwt token
-            localStorage.setItem("genius-token", data.token);
-            navigate(from, { replace: true });
-          });
+        console.log(user);
+        setloginuseremail(data.email);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.error(error);
+        setloginerror(error.message);
+      });
   };
-
   return (
-    <div className="hero w-full my-20">
-      <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
-        <div className="text-center lg:text-left">
-          <img className="w-3/4" src=" " alt="" />
-        </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-20">
-          <h1 className="text-5xl text-center font-bold">Login</h1>
-          <form onSubmit={handleLogin} className="card-body">
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="text"
-                name="email"
-                placeholder="email"
-                className="input input-bordered"
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="password"
-                className="input input-bordered"
-              />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
-            </div>
-            <div className="form-control mt-6">
-              <input className="btn btn-primary" type="submit" value="Login" />
-            </div>
-          </form>
-          <p className="text-center">
-            New to Genius Car{" "}
-            <Link className="text-orange-600 font-bold" to="/signup">
-              Sign Up
-            </Link>{" "}
-          </p>
-          {/* <SocialLogin></SocialLogin> */}
-        </div>
+    <div className="h-[800px] flex justify-center items-center">
+      <div className="w-96 p-8">
+        <h1 className="text-3xl mb-10 font-semibold text-center">LOGIN</h1>
+        <form onSubmit={handleSubmit(handleLogin)}>
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text text-2xl font-semibold">Email:</span>
+            </label>
+            <input
+              type="email"
+              {...register("email", { required: "Email Address is required" })}
+              className="input input-bordered"
+            />
+            {errors.email && (
+              <p className="text-red-600" role="alert">
+                {errors.email?.message}
+              </p>
+            )}
+          </div>
+          <div className="form-control w-full max-w-xs">
+            <label className="label">
+              <span className="label-text  text-2xl font-semibold">
+                Password:
+              </span>
+            </label>
+            <input
+              type="password"
+              {...register("password", {
+                required: "password is required",
+                minLength: { value: 6, message: "At least 6 characters" },
+              })}
+              className="input input-bordered"
+            />
+            {errors.password && (
+              <p className="text-red-600" role="alert">
+                {errors.password?.message}
+              </p>
+            )}
+            <label className="label">
+              <span className="label-text">Forgot Password?</span>
+            </label>
+          </div>
+
+          <input
+            type="submit"
+            className="btn btn-accent w-full text-white"
+            value="Login"
+          />
+          <div>
+            {loginerror && (
+              <p className="text-red-600" role="alert">
+                {loginerror}
+              </p>
+            )}
+          </div>
+        </form>
+        <p>
+          New to Doctors Portal?
+          <Link className="text text-secondary font-semibold" to={"/signup"}>
+            Create an account
+          </Link>
+        </p>
+        <div className="divider">OR</div>
+        <button className="btn btn-outline w-full">CONTINUE WITH GOOGLE</button>
       </div>
     </div>
   );
