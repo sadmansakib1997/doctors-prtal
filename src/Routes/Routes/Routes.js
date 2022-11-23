@@ -89,7 +89,9 @@ export const router = createBrowserRouter([
           </Adminprivateroute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/bookings/${params.id}`),
+          fetch(
+            ` https://doctors-portal-server-three-kohl.vercel.app/bookings/${params.id}`
+          ),
       },
     ],
   },

@@ -1,15 +1,21 @@
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import React from "react";
-import { useNavigation } from "react-day-picker";
+import { useNavigation } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import LOading from "../../Shared/LOading/LOading";
 import Checkoutform from "./Checkoutbox/Checkoutform";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
 console.log(stripePromise);
+
 const Payment = () => {
   const booking = useLoaderData();
+  const navigation = useNavigation();
+
+  if (navigation.state === "loading") {
+    return <LOading></LOading>;
+  }
 
   return (
     <div>

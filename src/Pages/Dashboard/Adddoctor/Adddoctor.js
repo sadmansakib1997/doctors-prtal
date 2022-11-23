@@ -17,7 +17,9 @@ const Adddoctor = () => {
   const { data: specialities, isLoading } = useQuery({
     queryKey: ["speciality"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/appointmentspeciality");
+      const res = await fetch(
+        " https://doctors-portal-server-three-kohl.vercel.app/appointmentspeciality"
+      );
       const data = await res.json();
       return data;
     },
@@ -42,14 +44,18 @@ const Adddoctor = () => {
             Speciality: data.Speciality,
             photo: imgdata.data.url,
           };
-          fetch("http://localhost:5000/doctors", {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-              authorization: `bearer ${localStorage.getItem("accesstoken")}`,
-            },
-            body: JSON.stringify(doctor),
-          })
+
+          fetch(
+            " https://doctors-portal-server-three-kohl.vercel.app/doctors",
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+                authorization: `bearer ${localStorage.getItem("accessToken")}`,
+              },
+              body: JSON.stringify(doctor),
+            }
+          )
             .then((res) => res.json())
             .then((result) => {
               console.log(result);

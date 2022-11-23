@@ -7,7 +7,7 @@ import { Authcontext } from "../../../context/Authprovider/Authprovider";
 const Myappointment = () => {
   const { user } = useContext(Authcontext);
 
-  const url = `http://localhost:5000/bookings?email=${user?.email}`;
+  const url = ` https://doctors-portal-server-three-kohl.vercel.app/bookings?email=${user?.email}`;
   const { data: bookings = [] } = useQuery({
     queryKey: ["bookings", user?.email],
 
@@ -22,7 +22,7 @@ const Myappointment = () => {
     },
 
     // queryFn: async () =>
-    //   fetch(`http://localhost:5000/bookings?email=${user?.email}`, {
+    //   fetch(` https://doctors-portal-server-three-kohl.vercel.app/bookings?email=${user?.email}`, {
     //     headers: {
     //       authorization: `bearer ${localStorage.getItem("accesstoken")}`,
     //     },
@@ -57,7 +57,7 @@ const Myappointment = () => {
                       <button className="btn btn-primary btn-xs">pay</button>
                     </Link>
                   )}
-                  {booking.price && booking.paid && (
+                  {booking?.price && booking.paid && (
                     <button className="btn btn-success btn-xs">Paid</button>
                   )}
                 </td>

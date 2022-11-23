@@ -6,19 +6,24 @@ const Allusers = () => {
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/users");
+      const res = await fetch(
+        " https://doctors-portal-server-three-kohl.vercel.app/users"
+      );
       const data = await res.json();
       return data;
     },
   });
 
   const handledelete = (id) => {
-    fetch(`http://localhost:5000/users/admin/${id}`, {
-      method: "PUT",
-      headers: {
-        authorization: `bearer ${localStorage.getItem("accesstoken")}`,
-      },
-    })
+    fetch(
+      ` https://doctors-portal-server-three-kohl.vercel.app/users/admin/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          authorization: `bearer ${localStorage.getItem("accesstoken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
